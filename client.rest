@@ -1,0 +1,30 @@
+### Get a value
+POST http://localhost:9001/
+Content-Type: application/json 
+
+{
+  "action": "get",
+  "key": "foobar"
+}
+
+### POST /
+POST http://localhost:9001/
+Content-Type: application/json 
+
+{
+  "action": "set",
+  "key": "foobar",
+  "value": "some value 3"
+}
+
+### DELETE /
+DELETE http://localhost:9001/
+Content-Type: application/json 
+
+{
+  "key": "foobar",
+  "value": "some value"
+}
+
+### POST /init
+POST http://localhost:9001/init
