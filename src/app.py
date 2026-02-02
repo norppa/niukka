@@ -32,6 +32,7 @@ class Handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.end_headers()
         self.wfile.write(b"Niukka API")
+        
     def do_POST(self):
         body = read_json(self)
         if body is None:

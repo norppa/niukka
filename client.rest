@@ -1,3 +1,6 @@
+### GET /
+GET http://localhost:9001/
+
 ### Get a value
 POST http://localhost:9001/
 Content-Type: application/json 
@@ -18,13 +21,18 @@ Content-Type: application/json
 }
 
 ### DELETE /
-DELETE http://localhost:9001/
+POST http://localhost:9001/
 Content-Type: application/json 
 
 {
-  "key": "foobar",
-  "value": "some value"
+  "action": "del",
+  "key": "foobar"
 }
 
 ### POST /init
-POST http://localhost:9001/init
+POST http://localhost:9001/
+Content-Type: application/json 
+
+{
+  "action": "init"
+}
